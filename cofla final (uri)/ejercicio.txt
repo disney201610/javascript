@@ -1,0 +1,13 @@
+Cofla tiene una librería y quería hacer una página donde dada una lista de libros y categorías, muestre en cada estante correspondiente a la categoría el libro. Si el libro esta leído se debe marcar de manera que se distinga, por ejemplo, un color especifíco de fondo. Se debe mostrar también el número de libro. El mismo corresponde a la posición en la que se encuentra en la lista.
+
+Los libros estan compuestos de 4 valores:
+- Titulo
+- Autor
+- Leído
+- Categoría
+
+La página debe tener estilos apropiados.
+
+html + css = 2 / 4
+js = 5 / 6
+nota final = 7 / 10
