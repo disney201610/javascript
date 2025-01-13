@@ -23,7 +23,6 @@
 // const url = 'https://pokeapi.co/api/v2/pokemon/';
 // const pokemon = document.querySelector('.pokemon-propiedades');
 
-
 // btn.addEventListener('click', async function solicitarInfoPokemon() {
 //     const url_final = url + input.value.toLowerCase();
 //     const res = await fetch(url_final);
@@ -32,10 +31,18 @@
 //     data.abilities.forEach((ability) => {
 //         const pokemoninfo = document.createElement('p');
 //         pokemoninfo.textContent = ability.ability.name;
-//         pokemon.appendChild(pokemoninfo);
-//     });
-// });
-    
-import axios from 'https://cdn.skypack.dev/axios';
-axios('https://pokeapi.co/api/v2/pokemon/bulbasaur')
-    .then(res => console.log(res.data));
+// //         pokemon.appendChild(pokemoninfo);
+// //     });
+// // });
+
+// import axios from 'https://cdn.skypack.dev/axios';
+// axios('https://pokeapi.co/api/v2/pokemon/bulbasaur')
+//     .then(res => console.log(res.data));
+
+const getName = async () => {
+   let peticion = fetch('https://pokeapi.co/api/v2/pokemon/abilities');
+   let res = await peticion;
+   console.log(res);
+};
+
+getName();
