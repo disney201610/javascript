@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Interactivo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Mi Portafolio</h1>
+            <button id="theme-toggle">🌙</button>
+            <nav>
+                <ul>
+                    <li><a href="#about">Sobre mí</a></li>
+                    <li><a href="#skills">Habilidades</a></li>
+                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="about" class="section">
+            <h2>Sobre mí</h2>
+            <p>Soy un programador apasionado por resolver problemas complejos con soluciones tecnológicas creativas.</p>
+        </section>
+        <section id="skills" class="section">
+            <h2>Habilidades</h2>
+            <div class="skills-container">
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">React</div>
+                <div class="skill">Node.js</div>
+            </div>
+        </section>
+        <section id="projects" class="section">
+            <h2>Proyectos</h2>
+            <div id="projects-container" class="projects-container">
+                <!-- Los proyectos se generarán dinámicamente con JavaScript -->
+            </div>
+        </section>
+        <section id="contact" class="section">
+            <h2>Contacto</h2>
+            <form id="contact-form">
+                <input type="text" placeholder="Nombre" id="name" required>
+                <input type="email" placeholder="Correo electrónico" id="email" required>
+                <textarea placeholder="Mensaje" id="message" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <p id="form-feedback" style="display:none;"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Mi Portafolio</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

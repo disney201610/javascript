@@ -24,6 +24,7 @@ const url = 'https://pokeapi.co/api/v2/pokemon/';
 const pokemon = document.querySelector('.pokemon-propiedades');
 
 
+
 btn.addEventListener('click', async function solicitarInfoPokemon() {
     const url_final = url + input.value.toLowerCase();
     const res = await fetch(url_final);

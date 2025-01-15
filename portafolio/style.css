@@ -1,0 +1,36 @@
+/* Reset y estilos básicos */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Estilo del header horizontal */
+header {
+    background: linear-gradient(90deg, #007BFF, #28A745);
+    padding: 1rem;
+    display: flex;
+    flex-direction: ro  w;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #ffffff;
+    flex: 1;
+    /* El título ocupa espacio proporcional */
+}
