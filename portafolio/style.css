@@ -6,77 +6,6 @@ html {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.container {
-    display: flex;
-    width: 100%;
-    /* flex-direction: row; */
-    justify-content: space-between;
-}
-
-.container > *{
-    flex: 1;
-}
-
-.containe nav {
-    justify-content: space-between;
-}
-
-.container nav ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    justify-content: center;
-    gap: 50px;
-}
-
-.container nav ul li a{
-    all: unset;
-}
-
-.titulos {
-    text-align: center;
-    animation: pop-in 0.5s ease-in-out;
-}
-
-@keyframes pop-in {
-    0% {
-        transform: scale(0.5);
-        opacity: 0;
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-.titulo {
-    position: relative;
-    float: left;
-    background: tomato;
-    color: #fff;
-    font-size: 2.5em;
-}
-
-.titulo2 {
-    position: absolute;
-    right: 0;
-    width: 0;
-    border-left: 1px solid #000;
-    animation: escribir 5s steps(8) infinite alternate;
-}
-
-@keyframes escribir {
-    from {
-        width: 100%
-    }
-
-    to {
-        width: 0
-    }
-}
-
-
 header {
     background-color: #48e;
     padding: 1rem;
@@ -92,10 +21,100 @@ header h1 {
     color: #ffffff;
 }
 
-main{
+main {
     background-color: #1f2937;
     z-index: -1;
     position: relative;
     top: -20vw;
     padding-top: 15vw;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    /* flex-direction: row; */
+    justify-content: space-between;
+}
+
+.container>* {
+    flex: 1;
+}
+
+.container nav {
+    justify-content: space-between;
+}
+
+.container nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    gap: 50px;
+}
+
+.container nav ul li a {
+    all: unset;
+}
+
+.contenedor {
+    display: flex;
+    margin-top: -10px;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.sobre-mi .contenedor img {
+    clip-path: ellipse(36% 48% at 38% 50%);
+    width: 280px;
+    height: 350px;
+}
+
+.contenedor .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #CBD5E1;
+    width: 270px;
+    max-height: auto;
+    margin-left: 0;
+    margin-right: 150px;
+    white-space: wrap;
+}
+
+.contenedor .separacion {
+    width: 5px;
+    /* Add a width to make it visible */
+    height: 500px;
+    margin: 0 340px 0 0;
+    background-color: #000;
+}
+
+.perfil {
+    max-height: auto;
+    flex-direction: column;
+    flex: 1;
+    padding: 0;
+}
+
+.contenedor .perfil h2 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3.5rem;
+    color: #22D3EE;
+}
+
+.habilidades {
+    display: flex;
+    flex-direction: column;
+    margin-top: 152px;
+}
+
+.habilidades h2 {
+    color: #22D3EE;
+    font-size: 2.5rem;
+    text-align: center;
 }
