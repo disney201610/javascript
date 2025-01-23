@@ -3,6 +3,7 @@ html {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -15,10 +16,44 @@ header {
     align-items: center;
 }
 
-header h1 {
+
+h1 {
+    font-family: cursive, sans-serif;
     margin: 0;
-    font-size: 2rem;
+    font-size: 3rem;
     color: #ffffff;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #4488ee;
+    }
+
+    100% {
+        color: #ffffff;
+    }
 }
 
 main {
@@ -54,6 +89,25 @@ main {
 
 .container nav ul li a {
     all: unset;
+}
+
+.container nav ul li a:hover {
+    animation: esperar 0.7s alternate backwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes esperar {
+    0% {
+        color: #000;
+    }
+
+    50% {
+        color: #0d525d;
+    }
+
+    100% {
+        color: #22D3EE;
+    }
 }
 
 .contenedor {
@@ -117,4 +171,22 @@ main {
     color: #22D3EE;
     font-size: 2.5rem;
     text-align: center;
+}
+
+.habilidades .skills-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.habilidades .skills-container .skill{
+    padding: 10px;
+    width: 200px;
+    height: 50px;
+    margin-top: 20px;
+    background-color: #FACC15;
+    border: none;
+    border-radius: 10px;
 }
