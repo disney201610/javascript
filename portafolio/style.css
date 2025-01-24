@@ -88,7 +88,9 @@ main {
 }
 
 .container nav ul li a {
-    all: unset;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
 .container nav ul li a:hover {
@@ -186,7 +188,12 @@ main {
     width: 200px;
     height: 50px;
     margin-top: 20px;
-    background-color: #FACC15;
+    background-color: #ead36c;
     border: none;
     border-radius: 10px;
+    color: #2b6b80;
+}
+
+.habilidades .skills-container .skill:hover {
+    background-color: #ffffff;
 }
