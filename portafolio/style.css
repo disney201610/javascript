@@ -45,6 +45,7 @@ h1 {
 }
 
 @keyframes blink-caret {
+
    from,
    to {
       border-color: transparent;
@@ -74,7 +75,7 @@ main {
    justify-content: space-between;
 }
 
-.container > * {
+.container>* {
    flex: 1;
 }
 
@@ -163,7 +164,7 @@ main {
 }
 
 .habilidades h2 {
-   color: #22d3ee;
+   color: #22D3EE;
    font-size: 2.5rem;
    text-align: center;
 }
@@ -177,16 +178,45 @@ main {
 }
 
 .habilidades .skills-container .skill {
+   position: relative;
+   /* Necesario para posicionar el pseudo-elemento */
    padding: 10px;
    width: 200px;
    height: 50px;
    margin-top: 20px;
-   background-color: #ead36c;
+   background-color: white;
+   /* Color inicial */
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
    border: none;
    border-radius: 10px;
-   color: #2b6b80;
+   color: #374151;
+   text-align: center;
+   line-height: 50px;
+   cursor: pointer;
+   transition: background-color 0.7s, height 0.5s ease;
+}
+
+.habilidades .skills-container .skill::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 30px;
+   height: 30px;
+   background-color: yellow;
+   clip-path: circle(100% at 100% 0);
+   border-radius: 0 10px 0 0;
+   transition: background-color 0.4s ease;
 }
 
 .habilidades .skills-container .skill:hover {
-   background-color: #ffffff;
+   background-color: yellow;
+   color: #374151 ;
+   padding: 20px;
+   width: 200px;
+   height: 60px;
+}
+
+.habilidades .skills-container .skill:hover::before {
+   background-color: yellow;
 }
