@@ -16,6 +16,7 @@ zona.addEventListener("drop", (e) => {
   e.preventDefault();
   changeStyle(e.target, "#888");
   cargarArchivo(e.dataTransfer.files[0]);
+  zona.style.border = "4px solid #888";
 });
 
 const changeStyle = (element, color) => {
@@ -25,8 +26,18 @@ const changeStyle = (element, color) => {
 
 const cargarArchivo = (ar) => {
   const reader = new FileReader();
-  reader.readAsText(ar);
-  reader.addEventListener("load", (e) => {
-    document.querySelector(".resultado").textContent = e.currentTarget.result;
+  reader.readAsArrayBuffer(ar);
+  reader.addEventListener("progress", (e) => {
+    let carga = (e.loaded / ar.size) * 100;
+    console.log(carga);
+  });
+  reader.addEventListener(load, (e) => {
+    let video = new blob([new Uint8Array(e.currentTarget.result)], {
+      type: "video/mp4",
+    });
+    let url = URL.createObjectURL(video);
+    let img = document.createElement("VIDEO");
+    img.setAttribute("src", url);
+    document.querySelector(".resultado").appendChild(img);
   });
 };

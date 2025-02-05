@@ -5,12 +5,38 @@ body {
     font-family: sans-serif;
 }
 
-.zona-arrastre {
+.zona-arrastre,
+.barra-de-carga {
     padding: 60px 20px;
     border: 4px dashed #888;
     max-width: 500px;
     color: #888;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 30px;
     text-align: center;
+    font-style: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.barra-de-carga {
+    position: absolute;
+    width: 0%;
+    left: 0;
+    right: 0;
+    margin-top: 0px;
+    padding: 72px 20px;
+    border: none;
+    background-color: #cef;
+    z-index: 0;
+}
+
+.resultado {
+    text-align: center;
+    padding: 20px;
+}
+
+.img {
+    width: 400px;
+    margin: auto;
 }
