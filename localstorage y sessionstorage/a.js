@@ -13,9 +13,8 @@
 
 
 // a diferencia de localStorage, sessionStorage se borra cuando cerramos el navegador
-console.log(localStorage);
+// console.log(localStorage);
 
-let nombre = sessionStorage.getItem("nombre");
+// let nombre = sessionStorage.getItem("nombre");
 
-console.log(nombre);
-
+// console.log(nombre);
