@@ -1,5 +1,16 @@
 "use strict";
 
+let cache = [];
+
+const memoizer = (func) => {
+  return (e) => {
+    e.toString();
+    if (cache[index] != undefined) {
+      cache[index] = func(e);
+    }
+  };
+};
+
 const haceraAlgo = (num) => {
   const a = 20;
   const b = 12;
@@ -12,8 +23,8 @@ const haceraAlgo = (num) => {
   return c;
 };
 
-const date = new Date();
+// const date = new Date();
 
-haceraAlgo(60000);
+// haceraAlgo(60000);
 
-console.log(new Date() - date); 
+// console.log(new Date() - date);
