@@ -8,6 +8,7 @@ const memoizer = (func) => {
     if (cache[index] != undefined) {
       cache[index] = func(e);
     }
+    return cache[index];
   };
 };
 
@@ -23,8 +24,8 @@ const haceraAlgo = (num) => {
   return c;
 };
 
-// const date = new Date();
+const date = new Date();
 
-// haceraAlgo(60000);
+haceraAlgo(60000);
 
-// console.log(new Date() - date);
+console.log(new Date() - date);
